@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrahim Wani — Developer Portfolio</title>
+    <meta name="description"
+        content="Abrahim Wani's developer portfolio — AI automation, web scraping, full-stack development, and data engineering.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+        <div class="orb orb-5"></div>
+    </div>
+
+    <!-- Particle canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav" id="mainNav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>AW<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge animate-in">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title animate-in">
+                <span class="line line-1">Hi, I'm <span class="gradient-text">Abrahim</span></span>
+                <span class="line line-2">I build <span class="typed-text" id="typedText"></span><span
+                        class="cursor-blink">|</span></span>
+            </h1>
+            <p class="hero-subtitle animate-in">
+                Full-Stack Developer & AI Automation Engineer crafting intelligent systems, property platforms, and
+                data-driven products.
+            </p>
+            <div class="hero-cta animate-in">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats animate-in">
+                <div class="stat">
+                    <span class="stat-number" data-count="15">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="20">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Years Exp</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window glass-card animate-in">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="code-title">portfolio.py</span>
+                </div>
+                <pre class="code-body"><code><span class="code-keyword">class</span> <span class="code-class">Developer</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(<span class="code-param">self</span>):
+        <span class="code-param">self</span>.name = <span class="code-string">"Abrahim Wani"</span>
+        <span class="code-param">self</span>.role = <span class="code-string">"Full-Stack Dev"</span>
+        <span class="code-param">self</span>.projects = <span class="code-string">"15+"</span>
+        <span class="code-param">self</span>.skills = [
+            <span class="code-string">"Python"</span>, <span class="code-string">"React"</span>,
+            <span class="code-string">"AI/ML"</span>, <span class="code-string">"Scraping"</span>,
+            <span class="code-string">"AWS"</span>, <span class="code-string">"Electron"</span>
+        ]
+
+    <span class="code-keyword">def</span> <span class="code-func">build</span>(<span class="code-param">self</span>):
+        <span class="code-keyword">return</span> <span class="code-string">"Amazing things 🚀"</span></code></pre>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">Passionate developer specializing in AI-powered automation, property tech,
+                    and full-stack systems</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text animate-in">
+                    <div class="glass-card about-card">
+                        <p>I'm a developer who thrives at the intersection of <strong>AI, automation, and web
+                                development</strong>. With 15+ active projects spanning property tech, recruitment AI,
+                            financial tools, and data engineering — I build end-to-end solutions that solve real
+                            business problems.</p>
+                        <p>From <em>Electron desktop apps</em> to <em>React Native mobile apps</em>, from <em>AI-powered
+                                resume tailoring</em> to <em>large-scale web scraping pipelines</em> — every project I
+                            touch is designed with <strong>performance, scalability, and elegant code</strong> at its
+                            core.</p>
+                        <p>My expertise covers the full lifecycle: <strong>designing, building, deploying, and
+                                monitoring</strong> production applications on AWS infrastructure.</p>
+                    </div>
+                </div>
+                <div class="about-highlights animate-in">
+                    <div class="highlight-card glass-card">
+                        <div class="highlight-icon">🤖</div>
+                        <h3>AI & Automation</h3>
+                        <p>Intelligent screening, resume tailoring & workflow automation</p>
+                    </div>
+                    <div class="highlight-card glass-card">
+                        <div class="highlight-icon">🏠</div>
+                        <h3>PropTech</h3>
+                        <p>Property research, valuation reports & real estate intelligence</p>
+                    </div>
+                    <div class="highlight-card glass-card">
+                        <div class="highlight-icon">🌐</div>
+                        <h3>Full-Stack Dev</h3>
+                        <p>React, Next.js, Angular, React Native, Electron & FastAPI</p>
+                    </div>
+                    <div class="highlight-card glass-card">
+                        <div class="highlight-icon">📊</div>
+                        <h3>Data Engineering</h3>
+                        <p>40+ platform scrapers, data pipelines & cost analytics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">A showcase of all my active work — from AI systems to desktop apps</p>
+            </div>
+
+            <!-- Project Filter -->
+            <div class="project-filters animate-in">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI / ML</button>
+                <button class="filter-btn" data-filter="proptech">PropTech</button>
+                <button class="filter-btn" data-filter="scraping">Scraping</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="desktop">Desktop</button>
+                <button class="filter-btn" data-filter="fintech">FinTech</button>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- 1. PropScope — AI Property Research -->
+                <div class="project-card glass-card animate-in" data-category="proptech ai">
+                    <div class="project-image" style="background: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35" />
+                                <path d="M11 8v6M8 11h6" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status live">● Live</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-ai">LangChain</span>
+                            <span class="tag tag-api">FastAPI</span>
+                            <span class="tag tag-scraping">ScrapFly</span>
+                        </div>
+                        <h3 class="project-title">PropScope — AI Property Research</h3>
+                        <p class="project-desc">Comprehensive property research platform powered by AI. Features
+                            automated BAL research, Google Maps integration, LLM-powered analysis with OpenAI &
+                            Anthropic, Supabase vector RAG, and a Deal Co-Pilot for property valuations.</p>
+                        <div class="project-features">
+                            <span>🏘️ Property Intel</span>
+                            <span>🧠 AI RAG</span>
+                            <span>📊 Deal Co-Pilot</span>
+                            <span>🗺️ Maps API</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Agent Talent Management -->
+                <div class="project-card glass-card animate-in" data-category="ai fullstack">
+                    <div class="project-image" style="background: linear-gradient(135deg, #ec4899, #db2777, #be185d);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <path d="M12 2a5 5 0 015 5v1a5 5 0 01-10 0V7a5 5 0 015-5z" />
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status live">● Live</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-ai">LangChain</span>
+                            <span class="tag tag-cloud">AWS Lambda</span>
+                            <span class="tag tag-api">ClickUp API</span>
+                        </div>
+                        <h3 class="project-title">AI Candidate Screening System</h3>
+                        <p class="project-desc">End-to-end recruitment automation. AI screens candidates against client
+                            briefs, auto-tags ClickUp cards, manages follow-up emails, tracks scores via Langfuse, and
+                            schedules Calendly interviews. Fully webhook-driven.</p>
+                        <div class="project-features">
+                            <span>🧠 AI Resume Parsing</span>
+                            <span>📋 Multi-Brief Match</span>
+                            <span>📧 Auto Emails</span>
+                            <span>📊 Cost Dashboard</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Valuate Pro -->
+                <div class="project-card glass-card animate-in" data-category="proptech fullstack">
+                    <div class="project-image" style="background: linear-gradient(135deg, #10b981, #059669, #047857);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status live">● Live</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-python">FastAPI</span>
+                            <span class="tag tag-js">React + Vite</span>
+                            <span class="tag tag-cloud">AWS App Runner</span>
+                            <span class="tag tag-devops">CI/CD</span>
+                        </div>
+                        <h3 class="project-title">Valuate Pro</h3>
+                        <p class="project-desc">Full-stack property valuation management app. FastAPI backend + React
+                            frontend deployed on AWS App Runner with GitHub Actions CI/CD, Docker containerization, and
+                            ECR registry integration.</p>
+                        <div class="project-features">
+                            <span>🏠 Valuation Tracker</span>
+                            <span>🐳 Dockerized</span>
+                            <span>🚀 Auto-Deploy</span>
+                            <span>📡 REST API</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. SapienScore -->
+                <div class="project-card glass-card animate-in" data-category="fullstack mobile">
+                    <div class="project-image" style="background: linear-gradient(135deg, #f59e0b, #d97706, #b45309);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2z" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status active">● Active</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-js">React Native</span>
+                            <span class="tag tag-db">MongoDB</span>
+                            <span class="tag tag-cloud">AWS EC2</span>
+                        </div>
+                        <h3 class="project-title">SapienScore</h3>
+                        <p class="project-desc">Personality scoring and trait analysis SaaS platform. Full-stack
+                            application with rating system, relationship mapping, terms management, and comprehensive
+                            documentation. Deployed on AWS EC2.</p>
+                        <div class="project-features">
+                            <span>🧬 Trait Analysis</span>
+                            <span>⭐ Rating System</span>
+                            <span>🔗 Relations Map</span>
+                            <span>📱 Mobile App</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Engage Live (Super Ticker) -->
+                <div class="project-card glass-card animate-in" data-category="desktop fintech">
+                    <div class="project-image" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed, #6d28d9);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <path d="M8 21h8M12 17v4" />
+                                <path d="M7 10l3-3 2 2 5-5" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status active">● Active</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-js">Electron</span>
+                            <span class="tag tag-js">JavaScript</span>
+                            <span class="tag tag-desktop">Desktop App</span>
+                        </div>
+                        <h3 class="project-title">Engage Live — Desktop Ticker</h3>
+                        <p class="project-desc">Cross-platform desktop application built with Electron. Features
+                            real-time data feeds, customizable UI, and native Mac/Windows/Linux builds with NSIS
+                            installer and DMG packaging.</p>
+                        <div class="project-features">
+                            <span>🖥️ Native Desktop</span>
+                            <span>📈 Live Data Feed</span>
+                            <span>🍎 Mac + Win</span>
+                            <span>📦 Auto-Update</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. DecorRestGroup -->
+                <div class="project-card glass-card animate-in" data-category="mobile fullstack">
+                    <div class="project-image" style="background: linear-gradient(135deg, #06b6d4, #0891b2, #0e7490);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <rect x="5" y="2" width="14" height="20" rx="2" />
+                                <path d="M12 18h.01" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status active">● Active</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-js">Expo</span>
+                            <span class="tag tag-js">React Native</span>
+                            <span class="tag tag-db">Drizzle ORM</span>
+                            <span class="tag tag-js">NativeWind</span>
+                        </div>
+                        <h3 class="project-title">DecorRest Group — Mobile App</h3>
+                        <p class="project-desc">Expo React Native inventory management app with SQLite/Drizzle ORM,
+                            camera integration, haptics, Redux state management, React Query caching, and NativeWind
+                            styling. Full offline support.</p>
+                        <div class="project-features">
+                            <span>📱 React Native</span>
+                            <span>📸 Camera</span>
+                            <span>🗄️ Local DB</span>
+                            <span>📴 Offline Mode</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. ScrapFly Scraper Suite -->
+                <div class="project-card glass-card animate-in" data-category="scraping">
+                    <div class="project-image" style="background: linear-gradient(135deg, #ef4444, #dc2626, #b91c1c);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status live">● Live</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-scraping">ScrapFly</span>
+                            <span class="tag tag-data">40+ Platforms</span>
+                        </div>
+                        <h3 class="project-title">ScrapFly Scraper Suite</h3>
+                        <p class="project-desc">Massive multi-platform web scraping suite covering 40+ websites
+                            including Amazon, LinkedIn, Zillow, Instagram, Twitter, TikTok, YouTube, Domain.com.au,
+                            Realtor, and more. Includes a React real estate frontend.</p>
+                        <div class="project-features">
+                            <span>🕷️ 40+ Scrapers</span>
+                            <span>🏠 Real Estate</span>
+                            <span>📱 Social Media</span>
+                            <span>🛒 E-Commerce</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. KASADA Override — Anti-Bot Bypass -->
+                <div class="project-card glass-card animate-in" data-category="scraping">
+                    <div class="project-image" style="background: linear-gradient(135deg, #14b8a6, #0d9488, #0f766e);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status active">● Active</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-scraping">Bright Data</span>
+                            <span class="tag tag-perf">Anti-Bot</span>
+                        </div>
+                        <h3 class="project-title">KASADA Override — Anti-Bot Bypass</h3>
+                        <p class="project-desc">Advanced web scraping system designed to bypass Kasada anti-bot
+                            protection on Domain.com.au. Features proxy forwarding, checkpoint resumption, concurrent
+                            scraping of Gold Coast and Southern Region agents.</p>
+                        <div class="project-features">
+                            <span>🛡️ Anti-Bot Bypass</span>
+                            <span>🔄 Resume Support</span>
+                            <span>🌏 Region Scraping</span>
+                            <span>⚡ Concurrency</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Resume Tailoring Service -->
+                <div class="project-card glass-card animate-in" data-category="ai fullstack">
+                    <div class="project-image" style="background: linear-gradient(135deg, #a855f7, #9333ea, #7e22ce);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status complete">● Complete</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-python">FastAPI</span>
+                            <span class="tag tag-ai">AI/NLP</span>
+                            <span class="tag tag-python">ReportLab</span>
+                        </div>
+                        <h3 class="project-title">AI Resume Tailoring Service</h3>
+                        <p class="project-desc">FastAPI web app that automatically tailors resumes to job descriptions
+                            using AI. Parses PDFs, matches skills with NLP, reorders experiences by relevance, and
+                            generates beautifully designed PDF output preserving original formatting.</p>
+                        <div class="project-features">
+                            <span>📄 PDF Parsing</span>
+                            <span>🎯 Job Matching</span>
+                            <span>🎨 Format Preserve</span>
+                            <span>⚡ Real-time</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. PHAX / PHA-RX -->
+                <div class="project-card glass-card animate-in" data-category="fullstack scraping">
+                    <div class="project-image" style="background: linear-gradient(135deg, #22d3ee, #06b6d4, #0891b2);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <path
+                                    d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status active">● Active</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-js">React</span>
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-scraping">Scraper</span>
+                        </div>
+                        <h3 class="project-title">PHAX — Pharmacy Drug Tracker</h3>
+                        <p class="project-desc">International pharmacy tracking platform with frontend dashboard,
+                            backend scraper for drug pricing and availability, and Excel-based analytics. Tracks
+                            medications across global pharmacies with RXPose integration.</p>
+                        <div class="project-features">
+                            <span>💊 Drug Tracking</span>
+                            <span>🌍 International</span>
+                            <span>📊 Price Analytics</span>
+                            <span>🔍 Scraper Engine</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Ask Financials -->
+                <div class="project-card glass-card animate-in" data-category="fintech fullstack">
+                    <div class="project-image" style="background: linear-gradient(135deg, #059669, #10b981, #34d399);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status active">● Active</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-js">Next.js</span>
+                            <span class="tag tag-cloud">AWS Amplify</span>
+                            <span class="tag tag-js">TailwindCSS</span>
+                        </div>
+                        <h3 class="project-title">Ask Financials</h3>
+                        <p class="project-desc">FinTech landing page and web app built with Next.js and deployed on AWS
+                            Amplify. Features Figma-designed UI, Tailwind styling, and a modern financial services
+                            experience.</p>
+                        <div class="project-features">
+                            <span>💰 FinTech UI</span>
+                            <span>🎨 Figma Design</span>
+                            <span>☁️ AWS Amplify</span>
+                            <span>📱 Responsive</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. Money Matters -->
+                <div class="project-card glass-card animate-in" data-category="fintech fullstack">
+                    <div class="project-image" style="background: linear-gradient(135deg, #f97316, #ea580c, #c2410c);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <rect x="1" y="4" width="22" height="16" rx="2" />
+                                <path d="M1 10h22" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status active">● Active</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-js">React</span>
+                            <span class="tag tag-js">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Money Matters</h3>
+                        <p class="project-desc">Personal finance and money management web application built with React.
+                            Helps users track expenses, manage budgets, and visualize their financial data with clean
+                            interactive dashboards.</p>
+                        <div class="project-features">
+                            <span>💳 Expense Tracker</span>
+                            <span>📊 Dashboards</span>
+                            <span>📈 Analytics</span>
+                            <span>🎯 Budgets</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13. Valuation Report Generator -->
+                <div class="project-card glass-card animate-in" data-category="proptech ai">
+                    <div class="project-image" style="background: linear-gradient(135deg, #64748b, #475569, #334155);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                                <path d="M14 2v6h6" />
+                                <path d="M12 18v-6M9 15l3-3 3 3" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status active">● Active</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-ai">AI/LLM</span>
+                            <span class="tag tag-data">PDF Generation</span>
+                        </div>
+                        <h3 class="project-title">Valuation Report Generator</h3>
+                        <p class="project-desc">Automated property valuation report generation system. Uses AI to
+                            compile market data, comparable sales, and property analysis into professionally formatted
+                            LMD-standard PDF reports with calibri fonts and branded templates.</p>
+                        <div class="project-features">
+                            <span>📑 PDF Reports</span>
+                            <span>🤖 AI Analysis</span>
+                            <span>🏘️ Comparables</span>
+                            <span>📐 LMD Standard</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14. MatchMaking Admin -->
+                <div class="project-card glass-card animate-in" data-category="fullstack">
+                    <div class="project-image" style="background: linear-gradient(135deg, #e11d48, #be123c, #9f1239);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status active">● Active</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-js">Angular</span>
+                            <span class="tag tag-js">TypeScript</span>
+                            <span class="tag tag-db">MongoDB</span>
+                        </div>
+                        <h3 class="project-title">MatchMaking — Admin Panel</h3>
+                        <p class="project-desc">Angular-based admin frontend for a matchmaking platform. Features user
+                            management, profile matching algorithms, database collection management, and analytics
+                            dashboard. Deployed with Karma testing setup.</p>
+                        <div class="project-features">
+                            <span>💑 Profile Matching</span>
+                            <span>👤 User Mgmt</span>
+                            <span>📊 Analytics</span>
+                            <span>🔧 Admin Panel</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 15. KPS Web -->
+                <div class="project-card glass-card animate-in" data-category="fullstack">
+                    <div class="project-image" style="background: linear-gradient(135deg, #3b82f6, #2563eb, #1d4ed8);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M3 9h18M9 21V9" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status active">● Active</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-js">Next.js</span>
+                            <span class="tag tag-js">TypeScript</span>
+                        </div>
+                        <h3 class="project-title">KPS Web Platform</h3>
+                        <p class="project-desc">Modern web platform built with Next.js and TypeScript. Features
+                            server-side rendering, optimized performance, and a clean responsive design for business
+                            operations and client management.</p>
+                        <div class="project-features">
+                            <span>⚡ Next.js SSR</span>
+                            <span>🔷 TypeScript</span>
+                            <span>📱 Responsive</span>
+                            <span>🏢 Business</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 16. Langfuse Observability Dashboard -->
+                <div class="project-card glass-card animate-in" data-category="ai">
+                    <div class="project-image" style="background: linear-gradient(135deg, #84cc16, #65a30d, #4d7c0f);">
+                        <div class="project-image-content">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)"
+                                stroke-width="1.5">
+                                <path d="M18 20V10M12 20V4M6 20v-6" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status live">● Live</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-ai">Langfuse</span>
+                            <span class="tag tag-dashboard">Dashboard</span>
+                        </div>
+                        <h3 class="project-title">Langfuse Observability Dashboard</h3>
+                        <p class="project-desc">Comprehensive observability platform for AI screening workflows. Tracks
+                            LLM costs, screening scores, success/failure metrics, and provides real-time cost analytics
+                            across the entire AI pipeline.</p>
+                        <div class="project-features">
+                            <span>💹 Cost Analytics</span>
+                            <span>🎯 Score Tracking</span>
+                            <span>📉 Failure Analysis</span>
+                            <span>🔍 Trace Viewer</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-link">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">Tech <span class="gradient-text">Stack</span></h2>
+                <p class="section-subtitle">Technologies and tools I use to bring ideas to life</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category glass-card animate-in">
+                    <h3 class="skill-category-title">
+                        <span class="skill-icon">⚡</span>Languages
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #3776ab;"></div>Python
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #f7df1e;"></div>JavaScript
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #3178c6;"></div>TypeScript
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #e34f26;"></div>HTML / CSS
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category glass-card animate-in">
+                    <h3 class="skill-category-title">
+                        <span class="skill-icon">🧠</span>AI & ML
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #00a67e;"></div>OpenAI / GPT
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #d97757;"></div>Anthropic / Claude
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #1c3c3c;"></div>LangChain
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #ff6f00;"></div>Langfuse
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category glass-card animate-in">
+                    <h3 class="skill-category-title">
+                        <span class="skill-icon">🌐</span>Frontend
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #61dafb;"></div>React / Next.js
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #dd0031;"></div>Angular
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #06b6d4;"></div>React Native / Expo
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #47848f;"></div>Electron
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category glass-card animate-in">
+                    <h3 class="skill-category-title">
+                        <span class="skill-icon">⚙️</span>Backend
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #009688;"></div>FastAPI
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #339933;"></div>Node.js
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #3ecf8e;"></div>Supabase
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #47a248;"></div>MongoDB
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category glass-card animate-in">
+                    <h3 class="skill-category-title">
+                        <span class="skill-icon">🕷️</span>Scraping
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #43b02a;"></div>ScrapFly
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #00b4d8;"></div>Bright Data
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #43b02a;"></div>Playwright
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #60a5fa;"></div>BeautifulSoup
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category glass-card animate-in">
+                    <h3 class="skill-category-title">
+                        <span class="skill-icon">☁️</span>Cloud & DevOps
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #ff9900;"></div>AWS (Lambda, EC2, ECR)
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #2496ed;"></div>Docker
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #2088ff;"></div>GitHub Actions
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-dot" style="background: #f05032;"></div>Git
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <p class="section-subtitle">Have a project in mind? Let's build something amazing together.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info animate-in">
+                    <a href="mailto:waniaruu@gmail.com" class="contact-item glass-card" target="_blank">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>waniaruu@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com/in/abrahim-wani-8476631a5" class="contact-item glass-card"
+                        target="_blank" rel="noopener">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>Abrahim Wani</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Aruuwani" class="contact-item glass-card" target="_blank"
+                        rel="noopener">
+                        <div class="contact-icon">🐙</div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>github.com/Aruuwani</p>
+                        </div>
+                    </a>
+                </div>
+                <form class="contact-form glass-card animate-in" id="contactForm"
+                    action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="4d061373-2ace-40f6-805f-52f5378e14a7">
+                    <input type="hidden" name="subject" value="New message from Portfolio">
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                    <input type="checkbox" name="botcheck" style="display: none;">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">Your Name</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Your Email</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                        <label for="message">Your Message</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                        </svg>
+                    </button>
+                    <div id="formResult" class="form-result"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-container glass-card">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="modal-header" id="modalHeader">
+                <div class="modal-icon" id="modalIcon"></div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-tags" id="modalTags"></div>
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <div class="modal-status-row">
+                    <span class="modal-status" id="modalStatus"></span>
+                    <span class="modal-category" id="modalCategory"></span>
+                </div>
+                <p class="modal-desc" id="modalDesc"></p>
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Key Features</h3>
+                    <div class="modal-features" id="modalFeatures"></div>
+                </div>
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Tech Stack</h3>
+                    <div class="modal-tech" id="modalTech"></div>
+                </div>
+                <div class="modal-actions">
+                    <a href="https://github.com/Aruuwani" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        <span>View on GitHub</span>
+                    </a>
+                    <button class="btn btn-secondary" onclick="closeModal()">
+                        <span>Close</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <span class="code-keyword">const</span> built = <span class="code-string">"with ❤️ by Abrahim
+                        Wani"</span>;
+                </p>
+                <p class="footer-year">© 2026 — All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
